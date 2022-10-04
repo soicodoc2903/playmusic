@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music</title>
+        <link rel="stylesheet" href="./assets/css/grid.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="./assets/img/icon.gif">
+    </head>
+
+    <body>
+        <div class="app grid">
+            <div class="row">
+                <div class="left-sidebar col l-2 m-0 c-0">
+                    <section class="menu-section">
+                        <span class="menu-title"></span>
+                        <div class="menu-item">
+                            <i class="fas fa-home menu-icon active"></i>
+                            <h3 class="menu-name active">Home</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="fas fa-poll menu-icon"></i>
+                            <h3 class="menu-name">Trends</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="fas fa-music menu-icon"></i>
+                            <h3 class="menu-name">Library</h3>
+                        </div>
+                    </section>
+                <!--
+                    <section class="menu-section">
+                        <span class="menu-title">Discover</span>
+                        <div class="menu-item">
+                            <i class="fas fa-calendar-week menu-icon"></i>
+                            <h3 class="menu-name">Discover Weekly</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="far fa-dot-circle menu-icon"></i>
+                            <h3 class="menu-name">Made For You</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="fab fa-mix menu-icon"></i>
+                            <h3 class="menu-name">Daily Mix</h3>
+                        </div>
+                    </section>
+                    <section class="menu-section">
+                        <span class="menu-title">Your Collection</span>
+                        <div class="menu-item">
+                            <i class="far fa-heart menu-icon"></i>
+                            <h3 class="menu-name">Liked Songs</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="far fa-user-circle menu-icon"></i>
+                            <h3 class="menu-name">Favorite Artist</h3>
+                        </div>
+                        <div class="menu-item">
+                            <i class="fas fa-stream menu-icon"></i>
+                            <h3 class="menu-name">Playlist</h3>
+                        </div>
+                    </section>
+                -->
+                </div>
+                <div class="main col l-8 m-12 c-12">
+                    <section class="banner">
+                        <img
+                            src="./assets/img/banner.jpg"
+                            alt=""
+                            class="banner-img"
+                        />
+                    </section>
+                    <section class="playlist">
+                        <div class="wrapper">
+                            <div class="title-bar row">
+                                <span class="title-bar-item col l-1 m-1 c-1"
+                                    >#</span
+                                ><span class="title-bar-item col l-6 m-6 c-6"
+                                    >TITLE</span
+                                ><span class="title-bar-item col l-3 m-3 c-3"
+                                    >SINGER</span
+                                ><span class="title-bar-item col l-2 m-2 c-2"
+                                    >TIME</span
+                                >
+                            </div>
+                            <div class="list-wrapper"></div>
+                        </div>
+                    </section>
+                    <section class="playback not-playing">
+                        <div class="btn-section row">
+                            <div class="btn-area col l-3 m-3 c-3"></div>
+                            <div class="btn-area col l-6 m-6 c-6">
+                                <div class="middle-btn">
+                                    <i class="fas fa-random btn-random"></i>
+                                </div>
+                                <div class="middle-btn">
+                                    <i
+                                        class="fas fa-step-backward btn-previous"
+                                    ></i>
+                                </div>
+                                <div class="middle-btn">
+                                    <i class="fas fa-play btn-play"></i>
+                                    <i class="fas fa-pause btn-pause"></i>
+                                </div>
+                                <div class="middle-btn">
+                                    <i class="fas fa-step-forward btn-next"></i>
+                                </div>
+                                <div class="middle-btn">
+                                    <i class="fas fa-undo-alt btn-repeat"></i>
+                                </div>
+                            </div>
+                            <div class="btn-area col l-3 m-3 c-3">
+                                <i class="fas fa-volume-down"></i>
+                                <div class="volume-line">
+                                    <div class="volume-current"></div>
+                                </div>
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                        </div>
+                        <div class="seeking-bar">
+                            <span class="current-pos"></span>
+                            <div class="seeking-line">
+                                <div class="seeked"></div>
+                            </div>
+                            <span class="total-time"></span>
+                        </div>
+                        <audio src="" id="audio"></audio>
+                    </section>
+                </div>
+                <div class="right-sidebar col l-2 m-0 c-0">
+                    <section class="user row">
+                        <div class="user-avt col l-4">
+                            <img src="./assets/img/admin.jpg" alt="" />
+                        </div>
+                        <div class="user-info col l-8">
+                            <p class="user-name">Sói</p>
+                            <p class="user-subscription">
+                                Admin
+                                <img src="./assets/img/love.gif">
+                            </p>
+                        </div>
+                    </section>
+                    <section class="recent-played">
+                        <div class="section-header">
+                            <p class="section-title">Recent Played</p>
+                        </div>
+                        <div class="section-list-wrapper">
+                            <div class="recent-song">
+                                <img
+                                    class="song-img"
+                                    src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/8/8/7/4/8874d5a9d7b7e2429fdf7bb4247a455d.jpg"
+                                    alt=""
+                                />
+                                <div class="song-info">
+                                    <div class="song-recent-name">
+                                        Blank Space
+                                    </div>
+                                    <div class="song-recent-singer">
+                                        No Data
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent-song">
+                                <img
+                                    class="song-img"
+                                    src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/8/8/7/4/8874d5a9d7b7e2429fdf7bb4247a455d.jpg"
+                                    alt=""
+                                />
+                                <div class="song-info">
+                                    <div class="song-recent-name">
+                                        Blank Space
+                                    </div>
+                                    <div class="song-recent-singer">
+                                        No Data
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent-song">
+                                <img
+                                    class="song-img"
+                                    src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/8/8/7/4/8874d5a9d7b7e2429fdf7bb4247a455d.jpg"
+                                    alt=""
+                                />
+                                <div class="song-info">
+                                    <div class="song-recent-name">
+                                        Blank Space
+                                    </div>
+                                    <div class="song-recent-singer">
+                                        No Data
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent-song">
+                                <img
+                                    class="song-img"
+                                    src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/8/8/7/4/8874d5a9d7b7e2429fdf7bb4247a455d.jpg"
+                                    alt=""
+                                />
+                                <div class="song-info">
+                                    <div class="song-recent-name">
+                                        Blank Space
+                                    </div>
+                                    <div class="song-recent-singer">
+                                        No Data
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="song-info-section"></section>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/script/main.js"></script>
+    </body>
+</html>

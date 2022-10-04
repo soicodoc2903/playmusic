@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app {
+    overflow: hidden;
+}
+
+.left-sidebar {
+    height: 100vh;
+    background-color: #fcfcfd;
+    border-right: 1px solid #e3e7f2;
+}
+
+.right-sidebar {
+    height: 100vh;
+    background-color: #fcfcfd;
+    border-left: 1px solid #e3e7f2;
+}
+
+.menu-section:nth-child(1) {
+    margin-top: 40px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.menu-title {
+    color: #afb0ba;
+    margin-top: 24px;
+}
+
+.menu-item {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 26px;
+    color: #9b9ea9;
+}
+
+.menu-name {
+    padding-left: 26px;
+    font-weight: 500;
+    color: #9b9ea9;
+}
+
+.menu-icon.active {
+    color: #303341;
+}
+
+.menu-name.active {
+    color: #303341;
+    font-weight: 600;
+}
+
+/* Main section */
+
+.main {
+    height: 100vh;
+    background-color: #fcfcfd;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    height: 40%;
+}
+
+.playlist {
+    height: 40%;
+    position: relative;
+}
+
+.playback {
+    position: relative;
+    border-top: 1px solid #e3e7f2;
+    margin: 0 -12px;
+    height: 20%;
+}
+
+.banner-img {
+    display: flex;
+    width: 40%;
+    /* height: 80%; */
+    margin: 24px auto;
+    border-radius: 10px;
+}
+
+.vertical-line {
+    width: 3px;
+    background-color: red;
+    margin-left: -12px;
+}
+
+.user-name {
+    color: red;
+}
+
+.user-subscription {
+    color: purple;
+}
+
+.title-bar {
+    background-color: #fcfcfd;
+    padding-bottom: 20px;
+}
+
+.title-bar-item {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.title-bar-item:nth-child(1) {
+    text-align: center;
+}
+
+.title-bar-item:nth-child(2) {
+    padding-left: 124px;
+}
+
+.list-wrapper {
+    /* position: relative; */
+    height: calc(100% - 72px);
+    margin-top: 24px;
+    overflow: scroll;
+    width: 100%;
+}
+
+.list-item {
+    align-items: center;
+    padding: 6px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.list-item:hover {
+    background-color: rgba(222, 224, 233, 0.5);
+}
+
+.list-item.active {
+    background-color: #dee0e9;
+    font-weight: 500;
+}
+
+.song-id {
+    text-align: center;
+}
+.song-content {
+    display: flex;
+    align-items: center;
+}
+.song-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+.song-name {
+    margin-left: 62px;
+}
+.song-singer-name {
+}
+.song-time {
+}
+
+/* Playback */
+
+.btn-area {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-area:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.middle-btn {
+    font-size: 36px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.btn-random.active {
+    color: red;
+}
+
+.btn-repeat.active {
+    color: red;
+}
+
+.is-playing .btn-play {
+    display: none;
+}
+
+.is-playing .btn-pause {
+    display: block;
+}
+
+.not-playing .btn-play {
+    display: block;
+}
+
+.not-playing .btn-pause {
+    display: none;
+}
+
+.btn-pause {
+    /* display: none !important; */
+}
+
+.volume-line {
+    width: 72px;
+    height: 9px;
+    border-radius: 5px;
+    background-color: #ecf0f7;
+    overflow: hidden;
+    margin: 0 12px;
+}
+
+.volume-current {
+    background-color: red;
+    border-radius: 5px;
+    /* width: 24px; */
+    height: inherit;
+}
+
+.seeking-bar {
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeking-line {
+    width: 740px;
+    height: 9px;
+    border-radius: 5px;
+    background-color: #ecf0f7;
+    overflow: hidden;
+    margin: 0 24px;
+    cursor: pointer;
+}
+
+.seeked {
+    background-color: red;
+    border-radius: 5px;
+    height: inherit;
+}
+
+/* RIGHT SIDEBAR */
+
+.user {
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    /* justify-content: center; */
+}
+
+.user-avt {
+    text-align: center;
+}
+
+.user-avt img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-info {
+    margin-left: -12px;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.user-subscription {
+    font-size: 13px;
+    font-weight: 400;
+    color: #9da0ab;
+}
+
+.user-subscription i {
+    color: #ffa200;
+    padding: 0 8px;
+}
+
+.recent-played {
+    margin-top: 40px;
+    margin-left: 14px;
+    height: 40%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.see-all {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.section-list-wrapper {
+    overflow: hidden;
+}
+
+.recent-song {
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+}
+
+.song-recent-name {
+}
+
+.song-recent-singer {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.song-info {
+    margin-left: 14px;
+    height: 50%;
+}
+.song-info-section {
+    width: 250px;
+    height: 250px;
+    margin-left: 14px;
+    height: 50%;
+}
+
+.current-song-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.section-below-img {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.favourite-icon {
+    font-size: 20px;
+    color: red;
+}
+
+.current-song-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.current-song-singer {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .title-bar {
+        /* display: none; */
+    }
+
+    body {
+        font-size: 10px;
+    }
+
+    .middle-btn {
+        font-size: 16px;
+        padding: 0 8px;
+    }
+
+    .seeking-line {
+        width: 260px;
+    }
+
+    .volume-line {
+        width: 40px;
+    }
+}
